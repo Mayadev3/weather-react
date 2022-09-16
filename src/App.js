@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Hello Weather App</h1>
         <Dna
           visible={true}
           height="80"
