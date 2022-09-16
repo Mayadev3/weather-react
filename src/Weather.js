@@ -84,7 +84,7 @@ export default function Weather() {
               <div className="temp-container">
                 <p className="current-temp">
                   <img
-                    src="/public/images/sun.png"
+                    src="images/sun.png"
                     className="sun-icon"
                     id="icon"
                     alt="sun"

@@ -44,7 +44,9 @@
   font-family: "staatliches", serif;
   color: #191970;
 }
-
+.Weather .nav-bar .search-bar:focus {
+  outline: none;
+}
 .Weather .search-button {
   position: relative;
   top: 2px;
