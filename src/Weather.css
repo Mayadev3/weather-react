@@ -1,1 +1,205 @@
+.Weather .card {
+  margin: 0 auto;
+  margin-top: 40px;
 
+  height: 77vh;
+  box-shadow: #d4d4d4 0px 0px 10px;
+  border-radius: 0;
+  border: none;
+}
+.Weather .card-body {
+  background-image: url("/public/images/ladybug.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Weather .list-container ul {
+  list-style: none;
+}
+.Weather .list-container ul li {
+  display: inline;
+}
+.Weather .list-container ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 30px;
+  color: #0842cb;
+  font-weight: bold;
+  font-family: "Staatliches", sans-serif;
+  transition: all 1ms ease;
+}
+.Weather .list-container ul li a:hover {
+  box-shadow: white 0 0 4px 2px;
+  padding: 6px;
+}
+.Weather .nav-bar .search-bar {
+  display: inline-block;
+  margin-left: 27px;
+  width: 55%;
+  border: 2px solid #d3d3d3;
+  border-radius: 9px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-indent: 13px;
+  font-size: 13px;
+  font-family: "staatliches", serif;
+  color: #191970;
+}
+
+.Weather .search-button {
+  position: relative;
+  top: 2px;
+  left: 10px;
+  background-color: #0842cb;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  font-size: 17px;
+  padding: 7px 23px;
+}
+.Weather .nav-bar {
+  margin-top: 10px;
+}
+.Weather .nav-bar .search-button:hover {
+  background-color: #0842cbb0;
+}
+.Weather #current-location-button {
+  position: relative;
+  top: 2px;
+  left: 13px;
+  background-color: #03c04a;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  font-size: 17px;
+  padding: 7px 16px;
+}
+.Weather #current-location-button:hover {
+  background-color: #03c04ab8;
+}
+
+.Weather .city-details {
+  width: 30%;
+  margin-top: 26px;
+  margin-left: 28px;
+  background-color: white;
+  box-shadow: #d3d3d3 -4px 4px 8px;
+}
+.Weather .list-details ul {
+  list-style: none;
+  padding-top: 13px;
+  padding-left: 13px;
+}
+.Weather .berlin {
+  color: #191970;
+  font-family: "staatliches", serif;
+  font-weight: bold;
+  font-size: 27px;
+}
+.Weather #day-time,
+.weather {
+  font-family: "poppins", serif;
+  color: #909090;
+  font-weight: 500;
+  font-size: 15px;
+}
+.Weather .list-details ul li::first-letter {
+  text-transform: capitalize;
+}
+.Weather .weather {
+  position: relative;
+  top: -6px;
+}
+.Weather #description {
+  text-transform: capitalize;
+}
+.Weather .city-details2 {
+  margin-top: 26px;
+  margin-left: 27px;
+  font-family: "poppins", serif;
+  color: grey;
+}
+.Weather .list-details2 ul {
+  position: relative;
+  left: 320px;
+  top: -103px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 10px;
+  line-height: 19px;
+}
+.Weather .list-details2 ul li {
+  font-family: "poppins", serif;
+  color: #909090;
+  font-weight: 500;
+  font-size: 15px;
+}
+.Weather .temp-container {
+  text-align: center;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+}
+.Weather .sun-icon {
+  width: 73px;
+  height: 73px;
+  margin-top: -30px;
+}
+.Weather .degrees {
+  font-size: 50px;
+  color: #191970;
+}
+.Weather .row .col ul {
+  list-style: none;
+}
+.Weather .row .col ul li {
+  color: #191970;
+}
+
+.Weather .row-day {
+  font-weight: bold;
+  font-family: "staatliches", serif;
+}
+.Weather .row .col ul li i {
+  position: relative;
+  left: -1px;
+  top: 7px;
+  font-size: 22px;
+  color: #ffe200;
+  margin-bottom: 8px;
+}
+.Weather .row .col i.clouds {
+  color: #92bad2;
+}
+.Weather .row .col i.rain {
+  color: #a3e8fd;
+}
+.Weather .row-degree {
+  font-weight: 500;
+}
+.Weather sup {
+  font-size: 20px;
+  position: relative;
+  top: -30px;
+}
+.Weather sup a {
+  text-decoration: none;
+}
+.Weather .weather-app-wrapper {
+  max-width: 55%;
+  margin: 0 auto;
+}
+.Weather p.open-source {
+  margin-top: 25px;
+  font-size: 12px;
+}
+.Weather p.open-source a {
+  text-decoration: none;
+}
+.Weather .my-name {
+  color: #191970;
+  font-family: "Lato", sans-serif;
+}
+.Weather .open-source {
+  text-align: center;
+  margin-top: 10px;
+}
