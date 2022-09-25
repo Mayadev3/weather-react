@@ -5,7 +5,7 @@ import { LineWave } from "react-loader-spinner";
 import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
-  let [city, setCity] = useState(props.city);
+  const [city, setCity] = useState(props.city);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleCityChange(event) {
@@ -107,7 +107,11 @@ export default function Weather(props) {
 
                 <div className="temp-container">
                   <p className="current-temp">
-                    <img src={weatherData.iconUrl} className="iconImage" />
+                    <img
+                      src={weatherData.iconUrl}
+                      className="iconImage"
+                      alt={weatherData.description}
+                    />
                     <span className="degrees">
                       {Math.round(weatherData.temperature)}
                       <sup>
