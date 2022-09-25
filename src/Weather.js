@@ -113,7 +113,9 @@ export default function Weather(props) {
                       alt={weatherData.description}
                     />
                     <span className="degrees">
+                      <WeatherTemperature celsius={weatherData.temperature} />
                       {Math.round(weatherData.temperature)}
+
                       <sup>
                         <a href="/" id="temp-celsius" className="active">
                           °C
