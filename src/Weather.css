@@ -213,3 +213,6 @@
   width: 100%;
   height: 100vh;
 }
+.Weather .iconImage {
+  margin-top: -25px;
+}

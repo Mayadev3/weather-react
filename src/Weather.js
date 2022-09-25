@@ -107,7 +107,7 @@ export default function Weather(props) {
 
                 <div className="temp-container">
                   <p className="current-temp">
-                    {weatherData.iconUrl}
+                    <img src={weatherData.iconUrl} className="iconImage" />
                     <span className="degrees">
                       {Math.round(weatherData.temperature)}
                       <sup>
