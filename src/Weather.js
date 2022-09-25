@@ -1,6 +1,33 @@
 import "./Weather.css";
+import axios from "axios";
+import React, { useState } from "react";
 
-export default function Weather() {
+export default function Weather(props) {
+  let [city, setCity] = useState(props.city);
+  let [info, setInfo] = useState({});
+  let [loaded, setLoaded] = useState(false);
+
+  function displayWeather(response) {
+    setLoaded(true);
+    setInfo({
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+    });
+  }
+
+  function handleChange(event) {
+    setCity(event.target.value);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    let apiKey = "8ffe8ebc319a3f920065447a31ce0df0";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayWeather);
+  }
+
   let weatherData = {
     city: "Berlin",
     temperature: 21,
@@ -9,6 +36,7 @@ export default function Weather() {
     humidity: 51,
     wind: 3.6,
   };
+
   return (
     <div className="Weather">
       <div className="card-container">
@@ -30,13 +58,14 @@ export default function Weather() {
               </div>
 
               <div className="nav-bar">
-                <form>
+                <form onSubmit={handleSubmit}>
                   <input
                     type="text"
                     placeholder="Enter city name"
                     autoFocus="off"
                     autoComplete="off"
                     className="search-bar"
+                    onChange={handleChange}
                   />
                   <input
                     type="submit"
@@ -55,13 +84,11 @@ export default function Weather() {
                 <div className="list-details">
                   <ul>
                     <li>
-                      <span className="berlin">{weatherData.city}</span>
+                      <span className="berlin">{city}</span>
                     </li>
                     <li id="day-time">{weatherData.date}</li>
                     <li>
-                      <span className="weather" id="description">
-                        {weatherData.description}
-                      </span>
+                      <span className="weather">{info.description}</span>
                     </li>
                   </ul>
                 </div>
@@ -70,13 +97,8 @@ export default function Weather() {
               <div className="city-details2">
                 <div className="list-details2">
                   <ul>
-                    <li>
-                      Humidity:{" "}
-                      <span id="humidity">{weatherData.humidity}</span>%
-                    </li>
-                    <li>
-                      Wind: <span id="wind">{weatherData.wind}</span>km/hr
-                    </li>
+                    <li>Humidity: {info.humidity}%</li>
+                    <li>Wind: {Math.round(info.wind)}km/hr</li>
                   </ul>
                 </div>
               </div>
@@ -90,7 +112,7 @@ export default function Weather() {
                     alt="sun"
                   />
                   <span className="degrees">
-                    <span id="temp-number">{weatherData.temperature}</span>
+                    {Math.round(info.temperature)}
                     <sup>
                       <a href="/" id="temp-celsius" className="active">
                         °C
