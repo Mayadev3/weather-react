@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Weather from "./Weather.js";
+
 import "./WeatherTemperature.css";
 
 export default function WeatherTemperature(props) {
