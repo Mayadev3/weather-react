@@ -1,0 +1,20 @@
+.WeatherForecast .day {
+  color: #191970;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.WeatherForecast .forecastImg {
+  width: 43px;
+  height: 43px;
+  margin-top: -32px;
+}
+.WeatherForecast .minTemp {
+  color: #191970;
+  opacity: 0.8;
+  font-weight: bold;
+}
+.WeatherForecast .maxTemp {
+  color: #191970;
+  font-weight: bold;
+}

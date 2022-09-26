@@ -4,6 +4,7 @@ import "./Weather.css";
 import { LineWave } from "react-loader-spinner";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature.js";
+import WeatherForecast from "./WeatherForecast.js";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.city);
@@ -114,6 +115,7 @@ export default function Weather(props) {
                   />
                   <WeatherTemperature celsius={weatherData.temperature} />
                 </div>
+                <WeatherForecast coordinates={weatherData.coordinates} />
               </div>
             </div>
             <p className="open-source">
