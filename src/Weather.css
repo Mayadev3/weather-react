@@ -135,12 +135,7 @@
   font-weight: 500;
   font-size: 15px;
 }
-.Weather .temp-container {
-  text-align: center;
-  margin-top: -50px;
-  color: black;
-  font-weight: bold;
-}
+
 .Weather .sun-icon {
   width: 73px;
   height: 73px;
@@ -213,6 +208,12 @@
   width: 100%;
   height: 100vh;
 }
-.Weather .iconImage {
-  margin-top: -25px;
+
+.Weather .temp-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
 }

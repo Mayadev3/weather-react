@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 import { LineWave } from "react-loader-spinner";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature.js";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.city);
@@ -100,33 +101,18 @@ export default function Weather(props) {
                   <div className="list-details2">
                     <ul>
                       <li>Humidity: {weatherData.humidity}%</li>
-                      <li>Wind: {weatherData.wind}km/hr</li>
+                      <li>Wind: {Math.round(weatherData.wind)}km/hr</li>
                     </ul>
                   </div>
                 </div>
 
                 <div className="temp-container">
-                  <p className="current-temp">
-                    <img
-                      src={weatherData.iconUrl}
-                      className="iconImage"
-                      alt={weatherData.description}
-                    />
-                    <span className="degrees">
-                      <WeatherTemperature celsius={weatherData.temperature} />
-                      {Math.round(weatherData.temperature)}
-
-                      <sup>
-                        <a href="/" id="temp-celsius" className="active">
-                          °C
-                        </a>
-                        |
-                        <a href="/" id="temp-fahrenheit">
-                          °F
-                        </a>
-                      </sup>
-                    </span>
-                  </p>
+                  <img
+                    src={weatherData.iconUrl}
+                    className="iconImage"
+                    alt={weatherData.description}
+                  />
+                  <WeatherTemperature celsius={weatherData.temperature} />
                 </div>
               </div>
             </div>
