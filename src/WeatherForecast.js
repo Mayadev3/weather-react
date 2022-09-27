@@ -27,9 +27,14 @@ export default function WeatherForescast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            <WeatherForecastDay icon={icon} data={foreCast[0]} />
-          </div>
+          {foreCast.map((dailyForecast, index) => {
+            if (index < 6)
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay icon={icon} data={dailyForecast} />
+                </div>
+              );
+          })}
         </div>
       </div>
     );
