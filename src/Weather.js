@@ -43,20 +43,6 @@ export default function Weather(props) {
           <div className="weather-app-wrapper">
             <div className="card">
               <div className="card-body">
-                <div className="list-container">
-                  <ul>
-                    <li>
-                      <a href="/">Paris</a>
-                    </li>
-                    <li>
-                      <a href="/">Helsinki</a>
-                    </li>
-                    <li>
-                      <a href="/">Berlin</a>
-                    </li>
-                  </ul>
-                </div>
-
                 <div className="nav-bar">
                   <form onSubmit={handleSubmit}>
                     <input
@@ -72,14 +58,8 @@ export default function Weather(props) {
                       value="Search"
                       className="search-button"
                     />
-                    <input
-                      type="submit"
-                      value="Current Location"
-                      id="current-location-button"
-                    />
                   </form>
                 </div>
-
                 <div className="city-details">
                   <div className="list-details">
                     <ul>

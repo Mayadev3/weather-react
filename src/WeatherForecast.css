@@ -2,12 +2,17 @@
   color: #191970;
   font-weight: bold;
   font-size: 17px;
+  text-align: center;
 }
 
 .WeatherForecast .forecastImg {
-  width: 43px;
-  height: 43px;
+  width: 77px;
+  height: 70px;
   margin-top: -32px;
+  padding-left: 12px;
+}
+.WeatherForecast .tempExtremes {
+  margin-left: 20px;
 }
 .WeatherForecast .minTemp {
   color: #191970;
@@ -17,4 +22,7 @@
 .WeatherForecast .maxTemp {
   color: #191970;
   font-weight: bold;
+}
+.WeatherForecast .forecast-container {
+  margin-top: 26px;
 }
