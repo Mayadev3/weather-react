@@ -1,3 +1,17 @@
+Weather React App
+
+I took the challenge to rebuild my weather App using React this time. It is a user-friendly and simple application to look up the weather forecast in any city. When the user submits a city name, the weather forecast over the next five days is displayed. The weather data includes the current day, time, weather description, humidity, wind speed, max-min temperature as well as weather icons. The user can choose to toggle between temperature being in fahrenheit or celsius.
+
+Coding Achievements:
+
+- built a search bar to target the input value
+- used Axios to get data from the open weather API
+- created multiple components and their style sheets
+- utilized states and properties to link various components, inject the DOM with API data, and toggle between Fahrenheit and Celsius
+
+Demo Link: https://luxury-pudding-f10ac2.netlify.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
